@@ -1,0 +1,13 @@
+name = "ERGMTerms"
+uuid = "4d603c8b-1bd6-4a67-8fa3-c0a330560ce5"
+authors = ["Jakob Hoffmann <jfb-hoffmann@hotmail.de> and contributors"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.10"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

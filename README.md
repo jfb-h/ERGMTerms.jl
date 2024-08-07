@@ -1,4 +1,4 @@
-# ERGMTerms
+# ERGMTerms.jl
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://jfb-h.github.io/ERGMTerms.jl/stable/)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://jfb-h.github.io/ERGMTerms.jl/dev/)

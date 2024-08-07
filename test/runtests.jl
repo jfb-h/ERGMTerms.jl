@@ -13,14 +13,14 @@ const a = [[1], [1], [2], [1, 2], [2]]
     s = 3.0
     cs = [2.0, 1.0, 1.0, 1.0, 3.0, 1.0, 1.0, 0.32968, 2.0, 1.0, 1.65936, 0.0, 0.32968, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0]
     @test statistic(stat, g) ≈ s
-    @test all(isapprox.(changestat(stat, g), cs; atol=1e-7))
+    @test all(isapprox.(changestats(stat, g), cs; atol=1e-7))
 
     stat = GWESP(StructuralFold(a), decay, outneighbors)
 end
 
 @testset "NodeMatch" begin
     stat = NodeMatch(a)
-    cs = changestat(stat, g)
+    cs = changestats(stat, g)
     @test statistic(stat, g) == 4
     @test cs[[1, 3, 6]] == [1, 1, 0]
 end

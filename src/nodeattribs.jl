@@ -9,6 +9,6 @@ function statistic(a::NodeMatch, g::AbstractGraph)
     end
 end
 
-function changestat(a::NodeMatch, g::AbstractGraph)
+function changestats(a::NodeMatch, g::AbstractGraph)
     map(((u, v),) -> Int(intersects(a.attr[u], a.attr[v])), dyads(g))
 end

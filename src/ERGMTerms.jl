@@ -3,7 +3,7 @@ module ERGMTerms
 using Reexport: @reexport
 @reexport using Graphs
 
-export statistic, changestat
+export statistic, changestats
 export NodeMatch
 export Reciprocity
 export GWESP, NoGroups, SenderMatch, ReceiverMatch, StructuralFold

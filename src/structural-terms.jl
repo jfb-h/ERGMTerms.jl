@@ -6,7 +6,7 @@ function statistic(::Reciprocity, g::SimpleDiGraph)
     end
 end
 
-function changestat(::Reciprocity, g::SimpleDiGraph)
+function changestats(::Reciprocity, g::SimpleDiGraph)
     a = adjacency_matrix(g)
     map(((u, v),) -> a[v, u], dyads(g))
 end

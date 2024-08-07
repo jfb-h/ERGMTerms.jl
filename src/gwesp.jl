@@ -44,13 +44,13 @@ function stat!(a::GWESP, p::Vector{T}, g::SimpleDiGraph) where {T<:Integer}
 end
 
 """
-    changestat(a, g)
+    changestats(a, g)
 
 Compute change statistics for `ERGMTerm` `a` for all dyads in graph `g`.
 """
-function changestat end
+function changestats end
 
-function changestat(a::GWESP, g::SimpleDiGraph)
+function changestats(a::GWESP, g::SimpleDiGraph)
     p = zeros(Int, nv(g) - 1)
     s_obs = stat!(a, p, g)
     map(dyads(g)) do (i, j)

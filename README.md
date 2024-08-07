@@ -8,7 +8,7 @@ ATTENTION: This package is work in progress and might change frequently! Things 
 
 ## Example
 
-The workhorse functions of this package are `statistic(stat, g)` and `changestat(stat, g)`, both of which take a ERGM statistic specification `stat` and a graph `g`, as represented by the `Graphs.jl` library (which is reexported).
+The workhorse functions of this package are `statistic(stat, g)` and `changestats(stat, g)`, both of which take a ERGM statistic specification `stat` and a graph `g`, as represented by the `Graphs.jl` library (which is reexported).
 
 here is an example for a random graph:
 
@@ -24,7 +24,7 @@ Reciprocity()
 julia> statistic(stat, g)
 6
 
-julia> changestat(stat, g)
+julia> changestats(stat, g)
 2450-element Vector{Int64}:
  0
  0

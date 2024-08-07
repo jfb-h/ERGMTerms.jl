@@ -10,7 +10,7 @@ ATTENTION: This package is work in progress and might change frequently! Things 
 
 The workhorse functions of this package are `statistic(stat, g)` and `changestats(stat, g)`, both of which take a ERGM statistic specification `stat` and a graph `g`, as represented by the `Graphs.jl` library (which is reexported).
 
-here is an example for a random graph:
+Here is an example of computing total and dyadwise reciprocity on a random graph:
 
 ```julia-repl
 julia> using ERGMTerms

@@ -18,20 +18,6 @@ struct GWESP{S<:GroupTerm,F} <: ERGMTerm
     nbfun::F
 end
 
-"""
-    statistic(a, g)
-
-Compute statistic indicated by `ERGMTerm` `a` on `SimpleDiGraph` `g`.
-
-# Examples
-
-```julia
-stat = GWESP(NoGroups(), 0.4, outneighbors)
-statistic(stat, g)
-```
-"""
-function statistic end
-
 statistic(a::GWESP, g::SimpleDiGraph) = stat!(a, zeros(Int, nv(g) - 1), g)
 
 function stat!(a::GWESP, p::Vector{T}, g::SimpleDiGraph) where {T<:Integer}
@@ -42,13 +28,6 @@ function stat!(a::GWESP, p::Vector{T}, g::SimpleDiGraph) where {T<:Integer}
     end
     exp(a.decay) * s
 end
-
-"""
-    changestats(a, g)
-
-Compute change statistics for `ERGMTerm` `a` for all dyads in graph `g`.
-"""
-function changestats end
 
 function changestats(a::GWESP, g::SimpleDiGraph)
     p = zeros(Int, nv(g) - 1)

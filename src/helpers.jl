@@ -10,3 +10,7 @@ function dyads(g::AbstractGraph)
     itr = Iterators.filter(d -> first(d) != last(d), itr)
     itr
 end
+
+function dyads_mat(g::AbstractGraph)
+    Iterators.product(vertices(g), vertices(g))
+end

@@ -3,14 +3,14 @@ struct NodeMatch{T} <: ERGMTerm
     attr::T
 end
 
-function statistic(a::NodeMatch, g::AbstractGraph)
-    count(edges(g)) do e
-        intersects(a.attr[src(e)], a.attr[dst(e)])
+function statistic(a::NodeMatch, g::AbstractGraph; fun=intersects)
+    sum(edges(g)) do e
+        fun(a.attr[src(e)], a.attr[dst(e)])
     end
 end
 
-function changestats(a::NodeMatch, g::AbstractGraph)
-    map(((u, v),) -> Int(intersects(a.attr[u], a.attr[v])), dyads(g))
+function changestats(a::NodeMatch, g::AbstractGraph; fun=intersects)
+    map(((u, v),) -> Int(fun(a.attr[u], a.attr[v])), dyads(g))
 end
 
 abstract type CovSpec end

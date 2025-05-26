@@ -16,6 +16,7 @@ const a = [[1], [1], [2], [1, 2], [2]]
     @test all(isapprox.(changestats(stat, g), cs; atol=1e-7))
 
     stat = GWESP(StructuralFold(a), decay, outneighbors)
+
 end
 
 @testset "NodeMatch" begin

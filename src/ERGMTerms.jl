@@ -33,8 +33,8 @@ statistic(stat, g)
 function statistic end
 
 include("helpers.jl")
-include("gwesp.jl")
 include("structural-terms.jl")
 include("nodeattribs.jl")
+include("gwesp.jl")
 
 end

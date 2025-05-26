@@ -5,6 +5,14 @@ function intersects(a, b)
     return false
 end
 
+function nintersects(a, b)
+    s = 0
+    for x in a
+        s += x in b
+    end
+    return s
+end
+
 function dyads(g::AbstractGraph)
     itr = Iterators.product(vertices(g), vertices(g))
     itr = Iterators.filter(d -> first(d) != last(d), itr)
